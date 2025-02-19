@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Портфолио Овчаровой Софьи</title>
+
+<style>
+
+/* Общие стили */
+
+body, html {
+
+margin: 0;
+
+padding: 0;
+
+font-family: Arial, sans-serif;
+
+background-color: #fff3e0;
+
+color: #333;
+
+line-height: 1.6;
+
+}
+
+/* Шапка */
+
+header {
+
+background-color: #ff8c42;
+
+color: white;
+
+padding: 40px 20px;
+
+text-align: center;
+
+min-height: 50vh;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+header h1 {
+
+margin: 0;
+
+font-size: 2.5em;
+
+}
+
+header p {
+
+margin: 10px 0 0;
+
+font-size: 1.2em;
+
+}
+
+/* Основной контент */
+
+.container {
+
+max-width: 1200px;
+
+margin: 20px auto;
+
+padding: 20px;
+
+background-color: white;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+border-radius: 10px;
+
+}
+
+.section {
+
+margin-bottom: 40px;
+
+}
+
+.section h2 {
+
+color: #ff5722;
+
+border-bottom: 2px solid #ff5722;
+
+padding-bottom: 10px;
+
+margin-bottom: 20px;
+
+font-size: 1.8em;
+
+}
+
+.section p {
+
+font-size: 1.1em;
+
+}
+
+/* Изображения */
+
+.image-container {
+
+display: flex;
+
+justify-content: space-around;
+
+flex-wrap: wrap;
+
+gap: 20px;
+
+margin-top: 20px;
+
+}
+
+.image-item {
+
+text-align: center;
+
+width: 45%;
+
+max-width: 300px;
+
+}
+
+.image-item img {
+
+max-width: 100%;
+
+height: auto;
+
+border-radius: 10px;
+
+}
+
+.image-item p {
+
+margin-top: 10px;
+
+font-size: 1.1em;
+
+color: #ffd700; /* Жёлтый цвет */
+
+}
+
+/* Игры */
+
+.games-list {
+
+display: flex;
+
+justify-content: space-around;
+
+flex-wrap: wrap;
+
+gap: 20px;
+
+margin-top: 20px;
+
+}
+
+.game {
+
+text-align: center;
+
+width: 200px;
+
+background-color: #ffcc80;
+
+padding: 15px;
+
+border-radius: 10px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.game img {
+
+max-width: 100%;
+
+height: auto;
+
+border-radius: 10px;
+
+}
+
+.game p {
+
+margin-top: 10px;
+
+font-size: 1em;
+
+}
+
+/* Списки */
+
+.movies-list ul,
+
+.series-list ul,
+
+.books-list ul,
+
+.artists-list ul {
+
+list-style-type: none;
+
+padding: 0;
+
+}
+
+.movies-list li,
+
+.series-list li,
+
+.books-list li,
+
+.artists-list li {
+
+margin-bottom: 20px;
+
+padding-left: 30px;
+
+position: relative;
+
+}
+
+.movies-list li::before,
+
+.series-list li::before {
+
+content: "■";
+
+color: #ff5722;
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+.books-list li::before {
+
+content: "➤";
+
+color: #ff5722;
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+.movies-list h3,
+
+.series-list h3,
+
+.books-list h3,
+
+.artists-list h3 {
+
+color: #ff0000;
+
+margin-bottom: 5px;
+
+}
+
+/* Интересные факты */
+
+.facts-container {
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 20px;
+
+align-items: flex-start;
+
+}
+
+.facts-text {
+
+flex: 1;
+
+min-width: 300px;
+
+}
+
+.facts-image {
+
+flex: 0 0 300px;
+
+text-align: center;
+
+}
+
+.facts-image img {
+
+max-width: 100%;
+
+height: auto;
+
+border-radius: 10px;
+
+}
+
+.facts-image p {
+
+margin-top: 10px;
+
+font-size: 1.1em;
+
+color: #ffd700; /* Жёлтый цвет */
+
+}
+
+/* Подвал */
+
+footer {
+
+background-color: #ff5722;
+
+color: white;
+
+text-align: center;
+
+padding: 20px;
+
+margin-top: 40px;
+
+}
+
+footer a {
+
+color: #fff3e0;
+
+text-decoration: none;
+
+}
+
+footer a:hover {
+
+text-decoration: underline;
+
+}
+
+/* Адаптивность */
+
+@media (max-width: 768px) {
+
+.image-item, .game {
+
+width: 100%;
+
+}
+
+.facts-container {
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+.facts-image {
+
+margin-top: 20px;
+
+}
+
+}
+
+/* Новые стили для "Любимые исполнители" */
+
+.artists-list {
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+
+}
+
+.artists-list ul {
+
+list-style-type: none;
+
+padding: 0;
+
+}
+
+.artists-list li {
+
+margin-bottom: 15px;
+
+padding-left: 20px;
+
+position: relative;
+
+}
+
+.artists-list h3::before {
+
+content: "*";
+
+color: #ff5722; /* Оранжевый цвет */
+
+font-size: 1.5em; /* Увеличенный размер */
+
+font-weight: bold; /* Жирный шрифт */
+
+position: absolute;
+
+left: -10px;
+
+top: 0;
+
+}
+
+.artists-list .popular-tracks {
+
+color: #ffd700; /* Жёлтый цвет */
+
+font-weight: bold; /* Жирный шрифт */
+
+margin-top: 10px;
+
+}
+
+.artists-list .popular-tracks ul {
+
+list-style-type: none;
+
+padding-left: 20px;
+
+}
+
+.artists-list .popular-tracks li {
+
+margin-bottom: 5px;
+
+padding-left: 15px;
+
+position: relative;
+
+}
+
+.artists-list .popular-tracks li::before {
+
+content: "•";
+
+color: #ff5722; /* Оранжевый цвет */
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+/* Стили для изображений исполнителей */
+
+.artist-image {
+
+text-align: center;
+
+margin-bottom: 20px;
+
+width: 45%; /* Размер как в разделе "Обо мне" */
+
+max-width: 300px; /* Максимальная ширина */
+
+}
+
+.artist-image img {
+
+max-width: 100%;
+
+height: auto;
+
+border-radius: 10px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.artist-image p {
+
+margin-top: 10px;
+
+font-size: 1.2em;
+
+color: #ff5722;
+
+font-weight: bold;
+
+}
+
+/* Стили для нумерации в "Интересные факты" */
+
+.facts-text ol {
+
+list-style-type: none;
+
+padding: 0;
+
+counter-reset: fact-counter; /* Сброс счётчика */
+
+}
+
+.facts-text ol li {
+
+margin-bottom: 10px;
+
+padding-left: 30px;
+
+position: relative;
+
+}
+
+.facts-text ol li::before {
+
+content: counter(fact-counter) ".";
+
+counter-increment: fact-counter; /* Увеличение счётчика */
+
+color: #ffd700; /* Жёлтый цвет */
+
+font-weight: bold; /* Жирный шрифт */
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+/* Стили для списков в "Мои достижения" и "Навыки" */
+
+.achievements ul,
+
+.skills ul {
+
+list-style-type: none;
+
+padding: 0;
+
+}
+
+.achievements li,
+
+.skills li {
+
+margin-bottom: 10px;
+
+padding-left: 20px;
+
+position: relative;
+
+}
+
+.achievements li::before,
+
+.skills li::before {
+
+content: "•";
+
+color: #ffd700; /* Жёлтый цвет */
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+/* Новые стили для "Любимые фильмы и сериалы" */
+
+.movies-series-list ul {
+
+list-style-type: none;
+
+padding: 0;
+
+}
+
+.movies-series-list li {
+
+margin-bottom: 10px;
+
+padding-left: 30px;
+
+position: relative;
+
+}
+
+.movies-series-list li::before {
+
+content: "✧"; /* Новый знак для списка */
+
+color: #ff5722; /* Оранжевый цвет */
+
+font-size: 1.2em;
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+}
+
+.movies-series-list h3 {
+
+color: #ffd700; /* Жёлтый цвет */
+
+margin-bottom: 10px;
+
+}
+
+.movies-series-list h4 {
+
+color: #ff5722; /* Оранжевый цвет */
+
+margin-bottom: 5px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Овчарова Софья</h1>
+
+<p>Волейбол — моя страсть! </p>
+
+</header>
+
+<div class="container">
+
+<!-- Обо мне -->
+
+<div class="section">
+
+<h2>❤️ Обо мне</h2>
+
+<p>Привет! Меня зовут Софья, и я увлечена волейболом. Этот вид спорта научил меня дисциплине, командной работе и стремлению к победе. Здесь вы найдёте информацию о моих достижениях, навыках и опыте.</p>
+
+<div class="image-container">
+
+<div class="image-item">
+
+<img src="images/my_photo.jpg" alt="Моё фото">
+
+<p>Моё фото</p>
+
+</div>
+
+<div class="image-item">
+
+<img src="images/volleyball.jpg" alt="Волейбол">
+
+<p>Волейбол</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Достижения -->
+
+<div class="section achievements">
+
+<h2> Мои достижения</h2>
+
+<ul>
+
+<li>Моя команда заняла 1 место на турнире между школами города Лобня по волейболу 2024 года.</li>
+
+<li>Лучший игрок команды на школьных соревнованиях 2024 года.</li>
+
+</ul>
+
+</div>
+
+<!-- Навыки -->
+
+<div class="section skills">
+
+<h2> Навыки</h2>
+
+<ul>
+
+<li>Командная игра и стратегическое мышление.</li>
+
+<li>Отличная физическая подготовка.</li>
+
+<li>Умение работать под давлением.</li>
+
+</ul>
+
+</div>
+
+<!-- Любимые игры -->
+
+<div class="section">
+
+<h2> Мои любимые игры</h2>
+
+<div class="games-list">
+
+<div class="game">
+
+<img src="images/brawl_stars.jpg" alt="Brawl Stars">
+
+<p><strong>Brawl Stars</strong></p>
+
+<p>Динамичная мобильная игра, где я люблю играть за разных персонажей и побеждать в командных боях!</p>
+
+</div>
+
+<div class="game">
+
+<img src="images/block_blast.jpg" alt="Block Blast!">
+
+<p><strong>Block Blast!</strong></p>
+
+<p>Захватывающая игра-головоломка, где нужно разрушать блоки и набирать очки.</p>
+
+</div>
+
+<div class="game">
+
+<img src="images/roblox.jpg" alt="Roblox">
+
+<p><strong>Roblox</strong></p>
+
+<p>Платформа, где я создаю свои миры и играю в игры, созданные другими пользователями.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Любимые книги -->
+
+<div class="section">
+
+<h2> Мои любимые книги</h2>
+
+<p>Мне очень нравится читать. Особенно мне нравятся книги в жанрах фантастика, детектив и классика. Да, я действительно люблю художественную литературу. Когда я читаю книги в этих жанрах, мой словарный запас пополняется, а личность развивается. Особенно это заметно на уроках литературы в школе. Мне понравились эти произведения:</p>
+
+<div class="books-list">
+
+<ul>
+
+<li>
+
+<h3>Гарри Поттер</h3>
+
+<p>История о мальчике-волшебнике, который узнаёт, что он волшебник, и отправляется в школу магии Хогвартс, где его ждут невероятные приключения.</p>
+
+</li>
+
+<li>
+
+<h3>Властелин колец</h3>
+
+<p>Эпическая сага о борьбе добра и зла, где хоббит Фродо должен уничтожить Кольцо Всевластия, чтобы спасти мир.</p>
+
+</li>
+
+<li>
+
+<h3>Капитанская дочка</h3>
+
+<p>История любви и верности на фоне восстания Пугачёва, написанная Александром Пушкиным.</p>
+
+</li>
+
+<li>
+
+<h3>Ревизор</h3>
+
+<p>Комедия Николая Гоголя о чиновниках, которые принимают мелкого служащего за важного ревизора.</p>
+
+</li>
+
+<li>
+
+<h3>Недоросль</h3>
+
+<p>Классическая пьеса Дениса Фонвизина, высмеивающая невежество и лень дворянства.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- Любимые фильмы и сериалы -->
+
+<div class="section">
+
+<h2> Любимые фильмы и сериалы</h2>
+
+<p>Мне очень нравятся русские сериалы и фильмы, и я предпочитаю смотреть именно их. Мне по душе такие жанры, как детектив, фантастика и многие другие. Среди множества просмотренных фильмов и сериалов я бы хотела выделить несколько особенно интересных:</p>
+
+<div class="movies-series-list">
+
+<h3>Фильмы:</h3>
+
+<ul>
+
+<li>
+
+<h4>Чебурашка</h4>
+
+<p>Трогательная история о дружбе Чебурашки и крокодила Гены. Фильм наполнен добротой, юмором и ностальгией.</p>
+
+</li>
+
+<li>
+
+<h4>Последний богатырь (все части)</h4>
+
+<p>Фантастическая трилогия о богатыре Иване, который попадает в сказочный мир и становится его защитником. Фильмы наполнены магией, приключениями и юмором.</p>
+
+</li>
+
+<li>
+
+<h4>Холоп 2</h4>
+
+<p>Продолжение комедии о молодом человеке, который попадает в прошлое и становится холопом. Фильм сочетает в себе юмор и социальную сатиру.</p>
+
+</li>
+
+</ul>
+
+<h3>Сериалы:</h3>
+
+<ul>
+
+<li>
+
+<h4>Инспектор Гаврилов</h4>
+
+<p>Детективный сериал о талантливом следователе Гаврилове, который раскрывает сложные преступления. Сериал наполнен интригами и неожиданными поворотами.</p>
+
+</li>
+
+<li>
+
+<h4>Ищейка</h4>
+
+<p>Детективный сериал о женщине-следователе, которая расследует сложные дела.</p>
+
+</li>
+
+<li>
+
+<h4>Против всех</h4>
+
+<p>Драматический сериал о жизни молодёжи, которая сталкивается с трудностями и борется за свои мечты. Сериал затрагивает важные социальные темы.</p>
+
+</li>
+
+<li>
+
+<h4>Молодёжка</h4>
+
+<p>Спортивный сериал о молодых хоккеистах, их мечтах, дружбе и борьбе за победу. Сериал вдохновляет и заряжает энергией.</p>
+
+</li>
+
+<li>
+
+<h4>Папины дочки</h4>
+
+<p>Комедийный сериал о жизни многодетной семьи, где папа воспитывает пятерых дочерей. Сериал наполнен юмором и тёплыми семейными моментами.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- Любимые исполнители -->
+
+<div class="section">
+
+<h2> Любимые исполнители</h2>
+
+<p>Я люблю многих исполнителей как российских, так и зарубежных. В основном я слушаю популярные треки, которые мне попадаются в рекомендациях. На платформе Яндекс Музыка у меня накопилась уже около 1000 песен разных жанров.</p>
+
+<div class="artists-list">
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/lusia_chebotina.jpg" alt="Люся Чеботина">
+
+<p>Люся Чеботина</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Солнце Монако</li>
+
+<li>Лучшая подруга</li>
+
+<li>Плакал Голливуд</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/sergey_lazarev.jpg" alt="Сергей Лазарев">
+
+<p>Сергей Лазарев</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Снег в океане</li>
+
+<li>Вкус малины</li>
+
+<li>Не пытайся повторить</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/anna_asti.jpg" alt="Анна Asti">
+
+<p>Анна Asti</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Царица</li>
+
+<li>По барам</li>
+
+<li>Ночью на кухне</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/dima_bilan.jpg" alt="Дима Билан">
+
+<p>Дима Билан</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Невозможное возможно</li>
+
+<li>Я просто люблю тебя</li>
+
+<li>На берегу неба</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/mia_boiko.jpg" alt="Мия Бойко">
+
+<p>Мия Бойко</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Гагарин</li>
+
+<li>Красива и молода</li>
+
+<li>Драма</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="artist-image">
+
+<img src="images/sergey_zhukov.jpg" alt="Руки Вверх">
+
+<p>Руки Вверх</p>
+
+</div>
+
+<p class="popular-tracks">Популярные треки:</p>
+
+<ul>
+
+<li>Крошка моя</li>
+
+<li>Он тебя целует</li>
+
+<li>18 мне уже</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Интересные факты -->
+
+<div class="section">
+
+<h2> Интересные факты</h2>
+
+<div class="facts-container">
+
+<div class="facts-text">
+
+<ol>
+
+<li>Я очень люблю собак.</li>
+
+<li>У меня есть кошка. Её зовут Масяня. Ей в этом году будет 10 лет.</li>
+
+<li>Я не люблю грибы и рыбу.</li>
+
+<li>Я учусь в 8 классе. Мне 14 лет.</li>
+
+<li>Создала этот сайт в феврале 2025 года.</li>
+
+<li>У меня есть младший брат Артемий. Ему в январе исполнилось 2 года.</li>
+
+<li>Я люблю жёлтый, оранжевый и красный цвет.</li>
+
+<li>Я живу в России, в Московской области.</li>
+
+<li>Я люблю биологию и информатику. Скорее всего я выберу эти предметы для сдачи ОГЭ.</li>
+
+<li>Хочу пойти в 10 класс на физ-мат. А затем поступить в институт на программиста. Так как мне это направление интересно и я хочу зарабатывать много денег.</li>
+
+<li>Хочу сдать экзамен ОГЭ полностью на отлично.</li>
+
+<li>Закончить школу с красным дипломом и золотой медалью.</li>
+
+<li>ЕГЭ сдать каждый предмет минимум на 90 баллов.</li>
+
+<li>Поступить на бюджет в какой-нибудь топовый вуз в Москве.</li>
+
+<li>Я 10 лет занималась танцами, перед тем как начала играть в волейбол.</li>
+
+</ol>
+
+</div>
+
+<div class="facts-image">
+
+<img src="images/my_cat.jpg" alt="Моя кошка">
+
+<p>Моя кошка</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Подвал -->
+
+<footer>
+
+<p>Свяжитесь со мной: <a href="mailto:soffa.ovcharova.14@mail.ru">soffa.ovcharova.14@mail.ru</a> | +7 (968) 626-09-50</p>
+
+</footer>
+
+</body>
+
+</html>
+
